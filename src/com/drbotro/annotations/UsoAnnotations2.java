@@ -1,14 +1,16 @@
 package com.drbotro.annotations;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class UsoAnnotations2{
 
     public static void main(String[] args){
 
         // 1. Cargar el archivo XML
-        ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext(
-                "applicationContextAnnotations.xml");
+        //ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContextAnnotations.xml");
+
+        // 1. Leer la clase de configuración
+        AnnotationConfigApplicationContext contexto = new AnnotationConfigApplicationContext(EmpleadosConfig.class);
 
         // 2. Pedir el bean al contenedor de beans
         Empleados antonio = contexto.getBean("comercialExperimentado", Empleados.class);
