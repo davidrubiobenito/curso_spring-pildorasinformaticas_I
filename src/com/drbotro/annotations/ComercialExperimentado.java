@@ -1,12 +1,13 @@
 package com.drbotro.annotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 public class ComercialExperimentado implements Empleados{
 
     // inyeccion dependencias en campo de clase
@@ -42,5 +43,17 @@ public class ComercialExperimentado implements Empleados{
     public void metodoCualquiera(CreacionInfromeFinanciero creacionInfromeFinanciero){
         this.creacionInfromeFinanciero = creacionInfromeFinanciero;
     }*/
+
+    // Ejección de código después de creación de Bean
+    @PostConstruct
+    public void ejecutaDespuesCreacion(){
+        System.out.println("--> Ejecutado tras la creación del Bean");
+    }
+
+    // Ejección de código después de apagado de contenedor Spring
+    @PreDestroy
+    public void ejecutaAntesDestruccion(){
+        System.out.println("--> Ejecutado antes de la destrucción");
+    }
 
 }
