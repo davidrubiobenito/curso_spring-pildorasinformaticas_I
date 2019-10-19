@@ -13,12 +13,20 @@
     
     <bean id="miEmpleado" class="com.drbotro.ioc.JefeEmpleado">    
     	<!-- 3. creación de la dependencia constructor -->
-    	<constructor-arg ref="miInforme"></constructor-arg>    
+    	<constructor-arg ref="miInforme"></constructor-arg>   
+    	
+    	<!-- 3. creación de la inyeccion campos -->
+    	<property name="email" value="equipodirectivo@gmail.com"></property>
+    	<property name="nombreEmpresa" value="Pildoras Informáticas"></property> 
     </bean>
     
      <bean id="miSecretarioEmpleado" class="com.drbotro.ioc.SecretarioEmpleado">    
     	<!-- 3. creación de la dependencia método setter -->
     	<property name="creacionInforme" ref="miInforme"></property>
+    	
+    	<!-- 3. creación de la inyeccion campos -->
+    	<property name="email" value="secretarios@gmail.com"></property>
+    	<property name="nombreEmpresa" value="Pildoras Informáticas"></property>
     </bean>
 	
 </beans> 
