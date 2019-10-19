@@ -16,6 +16,15 @@ public class UsoEmpleados{
         System.out.println(juan.getTareas());
         System.out.println(juan.getInforme());
 
+        System.out.println("--------------------------------");
+
+        // 2. Pedir el bean al contenedor de beans
+        Empleados maria = contexto.getBean("miSecretarioEmpleado", Empleados.class);
+
+        // 3. Utilizar el bean
+        System.out.println(maria.getTareas());
+        System.out.println(maria.getInforme());
+
         // 4. Cerrar el archivo XML
         contexto.close();
 
