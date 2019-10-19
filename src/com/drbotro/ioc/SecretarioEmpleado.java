@@ -7,10 +7,10 @@ public class SecretarioEmpleado implements Empleados{
     private String email;
     private String nombreEmpresa;
 
-    // 2. CreaciÃ³n de campo tipo CreacionInformes (interface)
+    // 2. Creación de campo tipo CreacionInformes (interface)
     private CreacionInformes creacionInforme;
 
-    // 2. CreaciÃ³n de campo tipo CreacionInformes (interface), nombre de este metodo es importante para la configuracion del XML
+    // 2. Creación de campo tipo CreacionInformes (interface), nombre de este metodo es importante para la configuracion del XML
     public void setCreacionInforme(CreacionInformes creacionInforme){
         this.creacionInforme = creacionInforme;
     }
