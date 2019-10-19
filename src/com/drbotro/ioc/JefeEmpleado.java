@@ -1,4 +1,4 @@
-package com.drbotro;
+package com.drbotro.ioc;
 
 public class JefeEmpleado implements Empleados{
 
