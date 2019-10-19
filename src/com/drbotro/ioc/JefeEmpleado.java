@@ -2,7 +2,7 @@ package com.drbotro.ioc;
 
 public class JefeEmpleado implements Empleados{
 
-    private static final String TAREA_JEFE_EMPLEADO = "Gestiono las cuestiones relativas a mis empleados de secciÃ³n";
+    private static final String TAREA_JEFE_EMPLEADO = "Gestiono las cuestiones relativas a mis empleados de sección";
 
     private String email;
     private String nombreEmpresa;
