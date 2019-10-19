@@ -1,6 +1,6 @@
 package com.drbotro.annotations;
 
-public interface CreacionInfromeFinanciero{
+public interface CreacionInformeFinanciero{
 
     public String getInformeFinanciero();
 
