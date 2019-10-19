@@ -6,15 +6,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class ComercialExperimentado implements Empleados{
 
+    // inyeccion dependencias en campo de clase
+    @Autowired
     private CreacionInfromeFinanciero creacionInfromeFinanciero;
 
-    public ComercialExperimentado(){
-    }
-
-    @Autowired
+    // inyecccion dependencia en constructor
+    /*@Autowired
     public ComercialExperimentado(CreacionInfromeFinanciero creacionInfromeFinanciero){
+        super();
         this.creacionInfromeFinanciero = creacionInfromeFinanciero;
-    }
+    }*/
 
     @Override
     public String getTareas(){
@@ -25,5 +26,17 @@ public class ComercialExperimentado implements Empleados{
     public String getInforme(){
         return creacionInfromeFinanciero.getInformeFinanciero();
     }
+
+    // inyección de dependencia setter
+    /*@Autowired
+    public void setCreacionInfromeFinanciero(CreacionInfromeFinanciero creacionInfromeFinanciero){
+        this.creacionInfromeFinanciero = creacionInfromeFinanciero;
+    }*/
+    
+    // inyección de dependencia metodo cualquiera
+    /*@Autowired
+    public void metodoCualquiera(CreacionInfromeFinanciero creacionInfromeFinanciero){
+        this.creacionInfromeFinanciero = creacionInfromeFinanciero;
+    }*/
 
 }
