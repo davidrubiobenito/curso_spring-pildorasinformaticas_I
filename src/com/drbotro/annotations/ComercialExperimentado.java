@@ -8,6 +8,9 @@ public class ComercialExperimentado implements Empleados{
 
     private CreacionInfromeFinanciero creacionInfromeFinanciero;
 
+    public ComercialExperimentado(){
+    }
+
     @Autowired
     public ComercialExperimentado(CreacionInfromeFinanciero creacionInfromeFinanciero){
         this.creacionInfromeFinanciero = creacionInfromeFinanciero;
