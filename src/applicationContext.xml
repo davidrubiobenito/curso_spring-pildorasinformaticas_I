@@ -8,7 +8,12 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd">
     
+    <!-- 3. creación de la dependencia -->
+    <bean id="miInforme" class="com.drbotro.ioc.Informe"></bean>
+    
     <bean id="miEmpleado" class="com.drbotro.ioc.JefeEmpleado">    
+    	<!-- 3. creación de la dependencia constructor -->
+    	<constructor-arg ref="miInforme"></constructor-arg>    
     </bean>
 	
 </beans> 

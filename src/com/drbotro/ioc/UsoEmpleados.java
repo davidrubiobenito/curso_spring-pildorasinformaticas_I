@@ -14,6 +14,7 @@ public class UsoEmpleados{
 
         // 3. Utilizar el bean
         System.out.println(juan.getTareas());
+        System.out.println(juan.getInforme());
 
         // 4. Cerrar el archivo XML
         contexto.close();

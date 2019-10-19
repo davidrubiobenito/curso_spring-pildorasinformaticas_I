@@ -11,4 +11,10 @@ public class SecretarioEmpleado implements Empleados{
 
     }
 
+    @Override
+    public String getInforme(){
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }

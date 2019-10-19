@@ -1,8 +1,6 @@
 package com.drbotro.ioc;
 
-public interface Empleados{
-
-    public String getTareas();
+public interface CreacionInformes{
 
     public String getInforme();
 
