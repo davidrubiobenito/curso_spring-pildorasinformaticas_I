@@ -1,10 +1,17 @@
 package com.drbotro.annotations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("comercialExperimentado")
+@Component
 public class ComercialExperimentado implements Empleados{
 
+    private CreacionInfromeFinanciero creacionInfromeFinanciero;
+
+    @Autowired
+    public ComercialExperimentado(CreacionInfromeFinanciero creacionInfromeFinanciero){
+        this.creacionInfromeFinanciero = creacionInfromeFinanciero;
+    }
 
     @Override
     public String getTareas(){
@@ -13,7 +20,7 @@ public class ComercialExperimentado implements Empleados{
 
     @Override
     public String getInforme(){
-        return "Este es un informe generado por el comercial.";
+        return creacionInfromeFinanciero.getInformeFinanciero();
     }
 
 }
