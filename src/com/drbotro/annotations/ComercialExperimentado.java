@@ -1,6 +1,7 @@
 package com.drbotro.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -8,6 +9,7 @@ public class ComercialExperimentado implements Empleados{
 
     // inyeccion dependencias en campo de clase
     @Autowired
+    @Qualifier("informeFinancieroTrim4")
     private CreacionInfromeFinanciero creacionInfromeFinanciero;
 
     // inyecccion dependencia en constructor
