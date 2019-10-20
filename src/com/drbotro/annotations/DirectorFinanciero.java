@@ -1,6 +1,13 @@
 package com.drbotro.annotations;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class DirectorFinanciero implements Empleados{
+
+    @Value("${email}")
+    private String email;
+    @Value("${nombreEmpresa}")
+    private String nombreEmpresa;
 
     private CreacionInformeFinanciero creacionInformeFinanciero;
 
@@ -16,6 +23,14 @@ public class DirectorFinanciero implements Empleados{
     @Override
     public String getInforme(){
         return creacionInformeFinanciero.getInformeFinanciero();
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public String getNombreEmpresa(){
+        return nombreEmpresa;
     }
 
 }

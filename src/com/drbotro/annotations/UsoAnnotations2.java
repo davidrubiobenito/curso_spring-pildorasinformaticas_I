@@ -10,15 +10,13 @@ public class UsoAnnotations2{
         AnnotationConfigApplicationContext contexto = new AnnotationConfigApplicationContext(EmpleadosConfig.class);
 
         // 2. Pedir el bean al contenedor de beans
-        Empleados empleado = contexto.getBean("directorFinanciero", Empleados.class);
-        Empleados tecnicoEmpleado = contexto.getBean("tecnicoFinanciero", Empleados.class);
+        DirectorFinanciero empleado = contexto.getBean("directorFinanciero", DirectorFinanciero.class);
 
         // 3. Utilizar el bean
         System.out.println(empleado.getTareas());
         System.out.println(empleado.getInforme());
-
-        System.out.println(tecnicoEmpleado.getTareas());
-        System.out.println(tecnicoEmpleado.getInforme());
+        System.out.println("Email: " + empleado.getEmail());
+        System.out.println("Nombre Empresa: " + empleado.getNombreEmpresa());
 
         // 4. Cerrar el archivo XML
         contexto.close();
